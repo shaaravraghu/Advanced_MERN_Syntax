@@ -1,0 +1,78 @@
+﻿Difference between Web and Internet?
+Internet – A physical computer network of computers (servers, databases and clients), cables, routers, satellites, etc.
+Web – Also called World Wide Web (www). It is a service that runs on the internet using HTTP Protocol (rules for internet communication) just like SMTP (email), FTP (file transfer), RTSP (video streaming).
+
+
+How does the Web work?
+1. Browser (like Chrome, Edge, Firefox etc.) sends a request over the Internet
+2. Web server takes the request over the internet and responds with HTML, JS, CSS, files, etc.
+3. The browser takes these files and displays them on your screen.
+
+
+Some must know full-forms:
+* DNS → Domain Name System (converts website names to IP addresses)
+* IP → Internet Protocol (unique numerical ID assigned to each component of internet)
+* HTTP → HyperText Transfer Protocol
+* HTTPS → HyperText Transfer Protocol Secure
+* URL → Uniform Resource Locator (name of your website)
+* HTML → HyperText Markup Language
+* CSS → Cascading Style Sheets
+* JS → JavaScript
+* TCP → Transmission Control Protocol
+* FTP → File Transfer Protocol
+* SMTP → Simple Mail Transfer Protocol
+
+
+Client v/s Server
+Client – Any device or software that requests information. Always initiates communication by requesting for service.
+Server – Powerful computer that responds to client requests. Waits for requests, processes them and provides the service back.
+
+
+Request
+* Message sent directly by client to server requesting for resources or some action.
+* A request includes: URL (address where the request has to be sent), Method (action needed to perform), Headers (hold additional information like Auth Token/ API Key, Content type, Accept etc.), Body (data).
+* Common HTTP Methods:
+1. GET: fetch data
+2. POST: send data
+3. PUT: update entire data
+4. PATCH: update partially
+5. DELETE: remove data
+
+
+Response
+* Message sent back by the server to the client after processing the request.
+* A response includes: Status Code, Header, Body
+* Important Status Code:
+1. 200/ 201: Successful Request
+2. 301/ 302: Redirect
+3. 400: Client Error (Bad Request)
+4. 401: Unauthorised
+5. 403: Forbidden
+6. 404: Not Found
+7. 500: Server Error
+
+
+Domain Name Server (DNS)
+It is the phonebook of the internet; converts human-friendly website names into IP addresses
+
+
+Internet Protocol (IP) and Port
+IP is the unique numeric address of any component/ device connected on that network.
+Port is the virtual doorway inside the component/ device/ server where specific services run
+* localhost (IP address of own machine 127.0.0.1) and 3000 (port where your backend/ frontend is running)
+* React: 3000; Node: 5000; Express: 8000  
+
+
+HTTP/ HTTPS:
+A protocol (set of rules) that specifies how data moves between client and server.
+HTTP Port: 80; HTTPS Port: 443; Data encryption using SSL/ TLS
+
+
+Browser Rendering Pipeline: 
+Browsers undergo 6 major stages to display the webpage.
+1. HTML Parsing → DOM (Document Object Model) is created that has a tree like structure
+2. CSS Parsing → CSSOM (CSS Object Model) constructs a map of all styling rules
+3. Combine DOM + CSSOM → Render Tree (blueprint for what all happens on the screen
+4. Layout (Reflow): Browser calculates dimensions of all page elements
+5. Paint: The art work of the website
+6. Composite → Final Rendering using GPU
