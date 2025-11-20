@@ -1,0 +1,145 @@
+/* CSS: Cascading Style Sheet
+It controls how HTML elements look — colors, spacing, layout, fonts, size, etc.
+*/
+
+
+/* Basic Syntax: selector { property: value; } */
+<h1 style="color: red"> data </h1> /* Inline styling */
+/* <style> tag */
+<head>
+    <style>
+        h1 {
+            color: red; 
+        }
+    </style>
+</head>
+
+
+/* External Stylesheet */
+# style.css
+h1, h2, h6 {
+    color: red; 
+}
+body {
+    background-color: red;
+} /* Whole body can also be assigned css styling */
+# index.html
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+/* Inline style overwrites external stylesheet in HTML file at that attribute only and smallest attribute can overwrite style of the attribute*/
+/* Whole body can also be assigned css styling */
+
+
+/* Color Property (foreground-text)*/
+color: red;
+/* Background Color Property */
+background-color: red;
+/* Color Systems: RGB (range: 0-255); Hex (hexadecimal) (range: 00-ff)*/
+color: rgb(0, 255, 0)
+color: #ff0000
+
+
+/* Selectors:
+universal selector: *{}
+element selector: h1{}
+ID selector: #myID{}
+class selector: .myclass{} */
+# index.html
+<h1 id="ID_01"> data </h1>
+<h1 class="Class_01"> data </h1>
+# style.css
+#ID_01{
+    color: red; 
+}
+.Class_01{
+    color: red; 
+}
+
+
+/* VS Code Shortcut (auto-create):
+.myclass (followed by enter)
+#myid (followed by enter) 
+lorem (followed by enter): generates random text for prototyping */
+# index.html
+<body>
+    <div class="myclass">lorem</div>
+    <div id="myid"></div>
+</body>
+
+
+/* Text Properties */
+text-align: left/ right/ center 
+text-decoration: underline/ overline/ line-through/ none 
+font-weight: normal/ bold/ bolder/ lighter
+font-weight: 100(lightest)-900(darkest)
+font-family: arial, sans-serif, "times new roman" (applies from 1st to last priority)
+font-size: 2px;
+
+
+/* Units in CSS: pixels(px) */
+96px = 1 inch 
+font-size: 2px;
+line-height: 2px/ normal
+text-transform: uppercase/ lowercase/ capitalize/ none
+
+
+/* Box Model in CSS:
+Height: vertical area for content box
+Width: horizontal area for content box
+Border: boundary of content box beyond the padding
+Padding: space between content area and border
+Margin: space between two box models in css
+*/
+height: 50px;
+width: 50px;
+border-width: 2px;
+border-style: solid/ dotted/ dash;
+border-color: black;
+border: 3px solid black; /*shorthand*/
+border: 10px/ 50%; /* round the corners of a box model */
+padding-left/ right/ top/ bottom: 2px;
+padding: 1px 2px 3px 4px; /* top right bottom left */
+margin-right/ left/ top/ bottom: 2px;
+
+
+/* Display property */
+/* 
+inline: takes space only needed for the element (no margin/ padding)
+block: takes full space as width
+inline-block: similar to inline but we can set margin & padding
+none: remove element from document flow
+*/
+display: inline/ block/ inline-block/ none;
+visibility: hidden/ none;
+ 
+/* Alpha Channel: opacity */
+color: rgba(255, 0, 0, 0.0-1.0)
+
+/* Absolute units: px, cm, mm, in */
+/* Relative units: % (size as relative to an element's parent), em (1 unit is equivalent to font size of the parent), rem (font size of root element), vh, vw*/
+
+
+/* CSS Position: how an element is positioned  */
+/* 
+static: default position (top, right, bottom, left, and z-index properties have no effect)
+relative: element is relative to itself (all the above will work)
+absolute: positioned relative to its closest positioned ancestor (removed from flow)
+fixed: positioned relative to browser (removed from flow)
+sticky: positioned based on user's scroll position
+*/
+#box {
+    position: static/ relative/ absolute/ fixed/ sticky
+    top: 20px
+    ...
+}
+
+/* z-index: it decides the stack level of elements; overlapping elements with a larger z-index cover those with a smaller one */
+z-index: auto (0)/ -1/ -2/ 1/ 2
+
+/* Background Image */
+background-image: url("image.jpg");
+background-size: cover (covers complete area with no empty spaces)/ contain (ensure full image is visible)/ auto 
+background-repeat: no-repeat;
+
+
