@@ -1,0 +1,88 @@
+/* Flexbox: Flexible Box Layout */
+/* 1-D layout method for arranging items in rows or columns */
+
+/* The Flex Model:
+flex container is the whole area; consists of flex items (blocks); with a main axis (alligning flex items) and a cross axis (index count for flex item)
+flex-direction: row (default: l-r)/ row-reverse (r-l)/ column (t-b)/ column-reverse (b-t): defined for main axis 
+ensures that all items fit inside container despite size defined by truncating each equally 
+*/
+
+/* Flex Properties for Flex Container:
+justify-content: aligns items along main axis (flex-start, flex-end, center, space-between, space-around, space-evenly)
+align-items: aligns items along cross axis (flex-start, flex-end, center, baseline, stretch)
+flex-wrap: controls whether flex items wrap onto multiple lines (nowrap, wrap, wrap-reverse)
+align-content: alignment of space between & around the content along cross-axis (flex-start, flex-end, center, space-between, space-around, stretch)
+*/
+
+/* Flex Properties for Flex Items:
+align-self: alignment of individual along the cross axis (auto, flex-start, flex-end, center, baseline, stretch)
+order: controls the order of flex items (default is 0; can be positive or negative integers)
+flex-grow: defines how much a flex item will grow relative to the rest (default is 0)
+flex-shrink: defines how much a flex item will shrink relative to the rest (default is 1)
+flex-basis: defines the default size of an element before the remaining space is distributed (auto, length, %)
+*/
+
+#index.html
+<body>
+    <h1>Flexbox Example</h1>
+    <div class="flex-container">
+        <div class="flex-item3">Item 1</div>
+        <div class="flex-item3">Item 2</div>
+        <div class="flex-item3">Item 3</div>
+    </div>
+</body>
+#styles.css
+.flex-container {
+    display: flex; /* Establishes a flex container */
+    flex-direction: row; /* Main axis is horizontal */
+    justify-content: space-around; /* Distributes items evenly with space around them */
+    align-items: center; /* Aligns items vertically in the center of the cross axis */
+    height: 200px; /* Height of the flex container */
+    border: 2px solid #000; /* Border for visibility */
+}
+
+.flex-item1 {
+    background-color: lightblue; /* Background color for flex items */
+    padding: 20px; /* Padding inside each flex item */
+    margin: 10px; /* Margin around each flex item */
+    border: 1px solid #000; /* Border for visibility */
+    flex-grow: 1; /* Allows items to grow and fill available space */
+    text-align: center; /* Center text inside flex items */
+}
+.flex-item2 {
+    background-color: lightgrey; /* Background color for flex items */
+    padding: 20px; /* Padding inside each flex item */
+    margin: 10px; /* Margin around each flex item */
+    border: 1px solid #000; /* Border for visibility */
+    flex-grow: 1; /* Allows items to grow and fill available space */
+    text-align: center; /* Center text inside flex items */
+}
+.flex-item3 {
+    background-color: lightgreen; /* Background color for flex items */
+    padding: 20px; /* Padding inside each flex item */
+    margin: 10px; /* Margin around each flex item */
+    border: 1px solid #000; /* Border for visibility */
+    flex-grow: 2; /* Allows items to grow and fill available space */
+    text-align: center; /* Center text inside flex items */
+}
+
+/* Media Queries: help create responsive websites
+width: px;
+min-width: px; (width and above)
+max-width: px; (width and below)
+height: px;
+min-height: px;  
+max-height: px;  
+orientation: landscape/portrait;
+resolution: dpi/ dppx;
+@media () and/ or/ not () { } // Combine multiple conditions
+*/
+
+@media (max-width: 600px) {
+    .flex-container {
+        flex-direction: column; /* Stacks items vertically on small screens */
+        height: auto; /* Adjust height for vertical layout */
+    }
+}
+
+/* Transitions: */
