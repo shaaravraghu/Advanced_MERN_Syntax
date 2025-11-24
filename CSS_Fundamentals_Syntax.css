@@ -86,3 +86,170 @@ resolution: dpi/ dppx;
 }
 
 /* Transitions: */
+/* Enable you to define the transition between two states of an element. */
+transition-property: all/ specific property (e.g., background-color, width);
+transition-duration: time (e.g., 2s, 500ms);
+transition-timing-function: ease/ linear/ ease-in/ ease-out/ ease-in-out/ cubic-bezier(n,n,n,n);
+transition-delay: time (e.g., 1s, 200ms);
+
+div:hover {
+    background-color: yellow; /* Changes background color on hover */
+    transition-property: background-color; /* Specifies the property to transition */
+    transition-duration: 0.5s; /* Duration of the transition */
+    transition-timing-function: ease-in-out; /* Timing function for the transition */
+}
+/* when cursor moves over the division */
+div:active{} 
+/* when cursor clicks on the division */
+transition: font-size 2s ease-in-out 0.2s;
+
+/* CSS Transform: apply 2D & 3D transformations */
+transform: rotate(45deg);
+rotate: 45deg; 
+rotateX/ Y/ Z: 45deg;
+transform: scale(<- x, y ->)
+transform: translate(<- x, y ->)
+transform: skew(<- 10 deg ->)
+
+
+/* Animations: animate CSS elements */
+@keyframe myName{
+    from { /* starting state */ }
+    to { /* ending state */ }
+}
+animation-name: myName;
+animation-duration: 4s;
+animation-timing-function: ease/ linear/ ease-in/ ease-out/ ease-in-out/ cubic-bezier(n,n,n,n);
+animation-delay: 2s;
+animation-iteration-count: infinite/ specific number;
+animation-direction: normal/ reverse/ alternate/ alternate-reverse;
+animation-fill-mode: none/ forwards/ backwards/ both;
+animation-play-state: running/ paused;
+animation: myName 4s ease-in-out 2s infinite alternate forwards;
+@keyframe percent{
+    0% { /* starting state */ }
+    50% { /* middle state */ }
+    100% { /* ending state */ }
+}
+
+
+
+/* The Grid Model */
+
+
+.container {
+  display: grid;                 /* activates CSS Grid */
+}
+
+/* DEFINE ROWS + COLUMNS */
+.container {
+  display: grid;
+  grid-template-columns: 100px 200px 1fr;   
+  /* creates 3 columns: fixed, fixed, flexible */
+  grid-template-rows: 100px auto 50px;      
+  /* creates 3 rows: fixed, dynamic, fixed */
+}
+/* repeat() FUNCTION ---------------------------------------- */
+.container {
+  grid-template-columns: repeat(3, 1fr);
+  /* 3 equal columns */
+}
+/* minmax() FUNCTION ---------------------------------------- */
+.container {
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  /* each column can't go below 200px */
+}
+/* auto-fit / auto-fill ------------------------------------- */
+.container {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* best for responsive grids — fits items automatically */
+}
+.container {
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  /* same as auto-fit, but empty slots retained */
+}
+
+
+/* GAP BETWEEN ROWS & COLUMNS                              */
+.container {
+  row-gap: 20px;                /* vertical spacing */
+  column-gap: 20px;             /* horizontal spacing */
+  gap: 20px;                    /* shorthand for both */
+}
+
+/* GRID ITEM POSITIONING                                   */
+.item {
+  grid-column-start: 1;
+  grid-column-end: 3;           /* spans columns 1 to 3 */
+  grid-row-start: 2;
+  grid-row-end: 4;              /* spans rows 2 to 4 */
+}
+/* Shorthand */
+.item {
+  grid-column: 1 / 3;           /* start / end */
+  grid-row: 2 / 4;
+}
+/* Span Keyword */
+.item {
+  grid-column: span 2;          /* take 2 columns */
+  grid-row: span 3;             /* take 3 rows */
+}
+
+
+/* GRID ALIGNMENT                                          */
+.container {
+  justify-items: center;        /* horizontal alignment of children */
+  align-items: center;          /* vertical alignment of children */
+  place-items: center;          /* shorthand of both */
+}
+.container {
+  justify-content: space-between; /* aligns the whole grid horizontally */
+  align-content: center;          /* aligns whole grid vertically */
+  place-content: center;          /* shorthand */
+}
+
+
+/* NAMED GRID AREAS                                        */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 80px auto 80px;
+
+  grid-template-areas:
+    "header header header"
+    "sidebar main main"
+    "footer footer footer";
+}
+.header  { grid-area: header; }
+.sidebar { grid-area: sidebar; }
+.main    { grid-area: main; }
+.footer  { grid-area: footer; }
+
+
+/* AUTO-FLOW + DENSE GRIDS                                 */
+.container {
+  grid-auto-flow: row;          /* default — fills by rows */
+  grid-auto-flow: column;       /* fills by columns */
+  grid-auto-flow: dense;        /* fills holes intelligently */
+}
+.container {
+  grid-auto-rows: minmax(100px, auto);  /* default height of dynamic rows */
+}
+
+
+/* GRID + FLEXBOX HYBRID EXAMPLE                          */
+/* Common in MERN frontends */
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;   /* flexbox inside grid item */
+  padding: 20px;
+  background: #f3f3f3;
+  border-radius: 10px;
+}
+
