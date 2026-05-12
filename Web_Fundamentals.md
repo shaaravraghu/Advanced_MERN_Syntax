@@ -89,3 +89,11 @@ Browsers typically go through these stages to display a webpage:
 4. **Layout / Reflow**: the browser calculates sizes and positions.
 5. **Paint**: the visual content is drawn.
 6. **Composite**: the final rendering is assembled using the GPU.
+
+
+
+
+
+
+
+
