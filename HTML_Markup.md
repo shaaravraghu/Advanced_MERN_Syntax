@@ -292,3 +292,8 @@ HTML5 introduced newer tags that make webpages more structured, readable, and me
 ### JSX Rule
 - Only JavaScript expressions are allowed inside `{ }`.
 - HTML cannot be written directly inside those braces.
+
+
+
+
+
