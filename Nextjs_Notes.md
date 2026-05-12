@@ -44,3 +44,6 @@ Next.js is a React framework for building web apps with routing, rendering strat
 - use API routes or route handlers for backend logic
 - keep auth and rendering concerns separated when possible
 
+
+
+
