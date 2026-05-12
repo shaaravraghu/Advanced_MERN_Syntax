@@ -104,3 +104,6 @@ System design is about building software that stays fast, reliable, and manageab
 - make stateless services where possible
 - separate fast paths from slow background work
 
+
+
+
