@@ -120,3 +120,10 @@ app.use((err, req, res, next) => {
 - use flash messages for user-friendly feedback after redirects
 - keep server errors logged even if user messages stay short
 
+
+
+
+
+
+
+
