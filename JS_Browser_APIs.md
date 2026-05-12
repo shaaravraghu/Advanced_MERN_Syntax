@@ -144,3 +144,6 @@ window.addEventListener("resize", () => {
 - Clean up listeners when components or pages are destroyed.
 - Use passive listeners for scroll and touch where appropriate.
 
+
+
+
