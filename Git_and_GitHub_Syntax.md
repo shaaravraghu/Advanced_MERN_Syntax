@@ -116,3 +116,9 @@
 - It is basically a rough copy of another repository.
 - You can fork a GitHub repository to your own account.
 - Typically, the fork copies the main branch, though other branches may also be available.
+
+
+
+
+
+
