@@ -116,3 +116,9 @@ function useWindowWidth() {
 - Keep them focused.
 - Combine hooks and business logic cleanly.
 
+
+
+
+
+
+
