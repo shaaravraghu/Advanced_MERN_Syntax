@@ -164,3 +164,6 @@ module.exports = {
 
 ### Animations and Transitions
 - Tailwind supports transition utilities, duration controls, easing, and transform scale helpers.
+
+
+
