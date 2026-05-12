@@ -75,3 +75,10 @@ AWS provides cloud services used to host and scale applications.
 - store uploads in S3 when appropriate
 - monitor app logs and process health
 
+
+
+
+
+
+
+
