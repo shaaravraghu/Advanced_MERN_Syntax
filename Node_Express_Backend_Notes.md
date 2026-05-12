@@ -244,3 +244,6 @@ app.use((err, req, res, next) => {
 - route handlers can be arrays or separate functions
 - `res.status(...).json(...)` is a common response pattern
 
+
+
+
