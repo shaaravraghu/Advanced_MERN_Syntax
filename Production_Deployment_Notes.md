@@ -61,3 +61,9 @@ Typical pieces:
 - make deployment steps reproducible
 - keep secrets out of source control
 
+
+
+
+
+
+
